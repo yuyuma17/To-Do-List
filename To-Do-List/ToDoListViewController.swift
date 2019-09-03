@@ -77,6 +77,10 @@ class ToDoListViewController: UITableViewController {
                 self.toDoArray.append(addTextField.text!)
                 self.saveToDoArrayAndReloadData()
             }
+            //Test
+            else {
+                assert(false)
+            }
         }
         
         //取消的按鈕
