@@ -9,7 +9,6 @@
 import UIKit
 
 class ToDoListViewController: UITableViewController {
-
     
     //建一個array來放待辦事項，而且要可以變動----------------------------------------------
     var toDoArray : [String] = ["Do an App"]
@@ -40,11 +39,8 @@ class ToDoListViewController: UITableViewController {
     
     //回傳Cell及顯示輸入的內容----------------------------------------------------------
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListCell", for: indexPath)
-        
         cell.textLabel?.text = toDoArray[indexPath.row]
-        
         return cell
     }
     
@@ -77,12 +73,8 @@ class ToDoListViewController: UITableViewController {
                 self.toDoArray.append(addTextField.text!)
                 self.saveToDoArrayAndReloadData()
             }
-            //Test
-            else {
-                assert(false)
-            }
         }
-        
+    
         //取消的按鈕
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         
@@ -101,7 +93,6 @@ class ToDoListViewController: UITableViewController {
     
     //新增功能的實作------------------------------------------------------------------
     @IBAction func newToDoThings(_ sender: UIBarButtonItem) {
-
         showAddAlert()
     }
     
@@ -167,7 +158,6 @@ class ToDoListViewController: UITableViewController {
             let reviseAction = UIAlertAction(title: "修改", style: .default) { (UIAlertAction) in
                 
                 if editTextField.text!.count >= 1 {
-                    
                     self.toDoArray[indexPath.row] = editTextField.text!
                     self.saveToDoArrayAndReloadData()
                 }
@@ -188,7 +178,6 @@ class ToDoListViewController: UITableViewController {
             editAlert.addAction(cancelAction)
             self.present(editAlert, animated: true, completion: nil)
         }
-        
         return [deleteAction, editAction]
     }
 }
