@@ -1,7 +1,7 @@
 # To-Do-List
 This is my first app.
 
-It includes the 4 basic functions（Create、Read、Update、Delete）.
+It includes these functions（Add、Delete、Revise、Save、Read）.
 
 You can use it to write down the things that you need to do later.
 
