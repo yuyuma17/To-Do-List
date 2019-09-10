@@ -5,7 +5,7 @@ It includes the 4 basic functions（Create、Read、Update、Delete）.
 
 You can use it to write down the things that you need to do later.
 
-Key learning concepts：UIAlert、UItableView、Userdefault
+Key learning concepts：UIAlert、UITableView、UserDefault
 
 ## Demo - To-Do-List
 
