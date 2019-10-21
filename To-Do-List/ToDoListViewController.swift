@@ -11,7 +11,7 @@ import UIKit
 class ToDoListViewController: UITableViewController {
     
     //建一個array來放待辦事項，而且要可以變動----------------------------------------------
-    var toDoArray : [String] = ["Do an App"]
+    var toDoArray: [String] = ["Do an App"]
     //宣告使用userDefaults------------------------------------------------------------
     let defaults = UserDefaults.standard
     
@@ -24,7 +24,7 @@ class ToDoListViewController: UITableViewController {
         if let noCrash = defaults.array(forKey: "toDoArray") as? [String] {
             toDoArray = noCrash
         }
-        
+
         //使用原生的editButton
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         editButtonItem.title = "編輯"
