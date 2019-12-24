@@ -65,12 +65,11 @@
 		167B308722FAA671007D67F3 /* To-Do-List */ = {
 			isa = PBXGroup;
 			children = (
-				167B308822FAA671007D67F3 /* AppDelegate.swift */,
-				167B308A22FAA671007D67F3 /* ToDoListViewController.swift */,
 				16843F7023B0A5AD00369EBD /* Model */,
-				167B308C22FAA671007D67F3 /* Main.storyboard */,
+				16843F7423B210D500369EBD /* View */,
+				16843F7523B210DB00369EBD /* Controller */,
+				16843F7323B210C000369EBD /* Supporting Files */,
 				167B308F22FAA671007D67F3 /* Assets.xcassets */,
-				167B309122FAA671007D67F3 /* LaunchScreen.storyboard */,
 				167B309422FAA671007D67F3 /* Info.plist */,
 			);
 			path = "To-Do-List";
@@ -83,6 +82,31 @@
 				16843F7123B1C32700369EBD /* RealmManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		16843F7323B210C000369EBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				167B308822FAA671007D67F3 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16843F7423B210D500369EBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				167B308C22FAA671007D67F3 /* Main.storyboard */,
+				167B309122FAA671007D67F3 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16843F7523B210DB00369EBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				167B308A22FAA671007D67F3 /* ToDoListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		DE63B78A0CE6A30B14E0B42A /* Frameworks */ = {
