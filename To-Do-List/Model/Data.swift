@@ -11,13 +11,7 @@ import RealmSwift
 
 class Data: Object {
     
-    @objc dynamic var id = UUID().uuidString
     @objc dynamic var task = ""
     @objc dynamic var done = false
-    @objc dynamic var createDate = Date()
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
     
 }

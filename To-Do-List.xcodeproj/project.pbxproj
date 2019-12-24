@@ -13,6 +13,7 @@
 		167B308E22FAA671007D67F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167B308C22FAA671007D67F3 /* Main.storyboard */; };
 		167B309022FAA671007D67F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167B308F22FAA671007D67F3 /* Assets.xcassets */; };
 		167B309322FAA671007D67F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167B309122FAA671007D67F3 /* LaunchScreen.storyboard */; };
+		16843F7223B1C32700369EBD /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16843F7123B1C32700369EBD /* RealmManager.swift */; };
 		56BC696C9D1F03F721BEAA35 /* Pods_To_Do_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671F445143929AD5CE726505 /* Pods_To_Do_List.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		167B308F22FAA671007D67F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		167B309222FAA671007D67F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		167B309422FAA671007D67F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16843F7123B1C32700369EBD /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		671F445143929AD5CE726505 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A8B1F2BB9AE040B160C36B /* Pods-To-Do-List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do-List.release.xcconfig"; path = "Target Support Files/Pods-To-Do-List/Pods-To-Do-List.release.xcconfig"; sourceTree = "<group>"; };
 		D709E32DF7F9577FA74BDEBB /* Pods-To-Do-List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do-List.debug.xcconfig"; path = "Target Support Files/Pods-To-Do-List/Pods-To-Do-List.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				16108E03236DCD5A00481778 /* Data.swift */,
+				16843F7123B1C32700369EBD /* RealmManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16108E04236DCD5A00481778 /* Data.swift in Sources */,
+				16843F7223B1C32700369EBD /* RealmManager.swift in Sources */,
 				167B308B22FAA671007D67F3 /* ToDoListViewController.swift in Sources */,
 				167B308922FAA671007D67F3 /* AppDelegate.swift in Sources */,
 			);
