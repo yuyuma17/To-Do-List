@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ToDoListViewController: UITableViewController {
     
+    let realm = try! Realm()
+    var datas: Results<Data>?
     //建一個array來放待辦事項，而且要可以變動----------------------------------------------
     var toDoArray: [String] = ["Do an App"]
     //宣告使用userDefaults------------------------------------------------------------
@@ -21,9 +24,10 @@ class ToDoListViewController: UITableViewController {
         super.viewDidLoad()
         
         //不要crash然後載入已儲存的userDefaults
-        if let noCrash = defaults.array(forKey: "toDoArray") as? [String] {
-            toDoArray = noCrash
-        }
+//        if let noCrash = defaults.array(forKey: "toDoArray") as? [String] {
+//            toDoArray = noCrash
+//        }
+        loadData()
 
         //使用原生的editButton
         self.navigationItem.leftBarButtonItem = self.editButtonItem
@@ -33,14 +37,20 @@ class ToDoListViewController: UITableViewController {
     
     //回傳Section Row的數量-----------------------------------------------------------
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toDoArray.count
+        return datas?.count ?? 0
     }
     
     
     //回傳Cell及顯示輸入的內容----------------------------------------------------------
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListCell", for: indexPath)
-        cell.textLabel?.text = toDoArray[indexPath.row]
+        
+        if let data = datas?[indexPath.row] {
+            
+            cell.textLabel?.text = data.task
+            cell.accessoryType = data.done ? .checkmark : .none
+        }
+        
         return cell
     }
     
@@ -54,12 +64,9 @@ class ToDoListViewController: UITableViewController {
     
     //反灰太久了把它改一下--------------------------------------------------------------
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            if cell.accessoryType == .none {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
-            }
+        
+        if let data = datas?[indexPath.row] {
+            changeDataStatus(data)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -77,8 +84,13 @@ class ToDoListViewController: UITableViewController {
         let addAction = UIAlertAction(title: "新增", style: .default) { (UIAlertAction) in
             
             if addTextField.text!.count >= 1 {
-                self.toDoArray.append(addTextField.text!)
-                self.saveToDoArrayAndReloadData()
+                
+                let data = Data()
+                data.task = addTextField.text!
+                self.saveData(data)
+                print("fileURL: \(self.realm.configuration.fileURL!)")
+//                self.toDoArray.append(addTextField.text!)
+//                self.saveToDoArrayAndReloadData()
             }
         }
     
@@ -149,8 +161,12 @@ class ToDoListViewController: UITableViewController {
         //刪除功能實作，並存進userDefaults裡
         let deleteAction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "刪除") { (UITableViewRowAction, IndexPath) in
             
-            self.toDoArray.remove(at: indexPath.row)
-            self.saveToDoArrayAndReloadData()
+            if let data = self.datas?[indexPath.row] {
+                self.deleteData(data, indexPath)
+            }
+            
+//            self.toDoArray.remove(at: indexPath.row)
+//            self.saveToDoArrayAndReloadData()
         }
         
         //修改功能實作
@@ -186,5 +202,47 @@ class ToDoListViewController: UITableViewController {
             self.present(editAlert, animated: true, completion: nil)
         }
         return [deleteAction, editAction]
+    }
+    
+    func saveData(_ data: Data) {
+        
+        do {
+            try realm.write {
+                realm.add(data)
+            }
+        } catch {
+            print("Error saving data \(error)")
+        }
+        tableView.reloadData()
+    }
+    
+    func loadData() {
+        
+        datas = realm.objects(Data.self).sorted(byKeyPath: "done", ascending: true)
+        tableView.reloadData()
+    }
+    
+    func changeDataStatus(_ data: Data) {
+        
+        do {
+              try realm.write {
+                  data.done = !data.done
+              }
+          } catch {
+              print("Error changing data \(error)")
+          }
+          tableView.reloadData()
+    }
+    
+    func deleteData(_ data: Data, _ indexPath: IndexPath) {
+        
+        do {
+              try realm.write {
+                realm.delete(data)
+              }
+          } catch {
+              print("Error changing data \(error)")
+          }
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
 }

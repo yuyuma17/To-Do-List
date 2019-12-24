@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+//            schemaVersion: 3,
+//            migrationBlock: { migration, oldSchemaVersion in
+//                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+//                if (oldSchemaVersion < 1) {
+//                    // The renaming operation should be done outside of calls to `enumerateObjects(ofType: _:)`.
+//                    migration.renameProperty(onType: Data.className(), from: "donenn", to: "done")
+//                }
+//        })
+        
         return true
     }
 
