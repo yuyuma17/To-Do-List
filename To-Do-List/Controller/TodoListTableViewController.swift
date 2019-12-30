@@ -1,5 +1,5 @@
 //
-//  TodoListViewController.swift
+//  TodoListTableViewController.swift
 //  To-Do-List
 //
 //  Created by 黃士軒 on 2019/8/7.
@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TodoListViewController: UITableViewController {
+class TodoListTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -31,6 +31,8 @@ class TodoListViewController: UITableViewController {
 //            toDoArray = noCrash
 //        }
         realmManager.loadData(reload: tableView)
+        
+        
 
         //使用原生的editButton
         self.navigationItem.leftBarButtonItem = self.editButtonItem

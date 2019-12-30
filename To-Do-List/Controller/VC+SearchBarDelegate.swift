@@ -8,13 +8,7 @@
 
 import UIKit
 
-extension TodoListViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        realmManager.datas = realmManager.datas?.filter("task CONTAINS[cd] %@", searchBar.text!)
-        tableView.reloadData()
-    }
+extension TodoListTableViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text?.count == 0 {
@@ -22,6 +16,9 @@ extension TodoListViewController: UISearchBarDelegate {
             DispatchQueue.main.async {
                 searchBar.resignFirstResponder()
             }
+        } else {
+            realmManager.datas = realmManager.datas?.filter("task CONTAINS[cd] %@", searchBar.text!)
+            tableView.reloadData()
         }
     }
 }
