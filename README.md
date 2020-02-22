@@ -1,12 +1,34 @@
-# To-Do-List
-This is my first app.
+<p align="center">
+  <img src="https://github.com/yuyuma17/To-Do-List/blob/master/GitHubLogo.png?raw=true" alt="Icon" width=10%/>
+</p>
+<H1 align="center">To-Do-List</H1>
 
-It includes these functions（Add、Delete、Revise、Save、Read）.
+This is a basic To-Do-List app that I practice using <a href="https://reurl.cc/M7nzrp">Realm</a> to complete.
 
-You can use it to write down the things that you need to do later.
+Function GIF Demo
+==========================
 
-Key learning concepts：UIAlert、UITableView、UserDefault
+- **Add New Task**
 
-## Demo - To-Do-List
+	<img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/add.gif?raw=true" width=30%/>
 
-<img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/d1.png?raw=true" width="290" height="550"> <img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/d2.png?raw=true" width="290" height="550"> <img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/d3.png?raw=true" width="290" height="550">
+- **Revise Task**
+
+	<img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/revise.gif?raw=true" width=30%/>
+
+- **Search Task**
+
+	<img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/search.gif?raw=true" width=30%/>
+
+- **Delete Task**
+
+	<img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/delete.gif?raw=true" width=30%/>
+
+- **Completed CheckMark**
+
+	<img src="https://github.com/yuyuma17/To-Do-List/blob/master/Demo/complete.gif?raw=true" width=30%/>
+
+Others
+==========================
+
+<a href="https://hackmd.io/@yuyuma17/BkFutJykU#/">Introduction For Realm</a> in Chinese
