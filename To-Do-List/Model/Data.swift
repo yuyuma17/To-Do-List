@@ -6,7 +6,6 @@
 //  Copyright © 2019 黃士軒. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
 
 class Data: Object {

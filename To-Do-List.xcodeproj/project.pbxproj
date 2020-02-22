@@ -8,27 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		16108E04236DCD5A00481778 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16108E03236DCD5A00481778 /* Data.swift */; };
+		1638B79423BD994200D0C11A /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1638B79323BD994200D0C11A /* TodoListViewController.swift */; };
 		167B308922FAA671007D67F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B308822FAA671007D67F3 /* AppDelegate.swift */; };
-		167B308B22FAA671007D67F3 /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B308A22FAA671007D67F3 /* TodoListTableViewController.swift */; };
 		167B308E22FAA671007D67F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167B308C22FAA671007D67F3 /* Main.storyboard */; };
 		167B309022FAA671007D67F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167B308F22FAA671007D67F3 /* Assets.xcassets */; };
 		167B309322FAA671007D67F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167B309122FAA671007D67F3 /* LaunchScreen.storyboard */; };
 		16843F7223B1C32700369EBD /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16843F7123B1C32700369EBD /* RealmManager.swift */; };
-		16E17DA123B3455B001CFD26 /* VC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E17DA023B3455B001CFD26 /* VC+SearchBarDelegate.swift */; };
 		56BC696C9D1F03F721BEAA35 /* Pods_To_Do_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671F445143929AD5CE726505 /* Pods_To_Do_List.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16108E03236DCD5A00481778 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		1638B79323BD994200D0C11A /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		167B308522FAA671007D67F3 /* To-Do-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		167B308822FAA671007D67F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		167B308A22FAA671007D67F3 /* TodoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewController.swift; sourceTree = "<group>"; };
 		167B308D22FAA671007D67F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		167B308F22FAA671007D67F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		167B309222FAA671007D67F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		167B309422FAA671007D67F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16843F7123B1C32700369EBD /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		16E17DA023B3455B001CFD26 /* VC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		671F445143929AD5CE726505 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A8B1F2BB9AE040B160C36B /* Pods-To-Do-List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do-List.release.xcconfig"; path = "Target Support Files/Pods-To-Do-List/Pods-To-Do-List.release.xcconfig"; sourceTree = "<group>"; };
 		D709E32DF7F9577FA74BDEBB /* Pods-To-Do-List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To-Do-List.debug.xcconfig"; path = "Target Support Files/Pods-To-Do-List/Pods-To-Do-List.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +70,7 @@
 				16843F7523B210DB00369EBD /* Controller */,
 				16843F7323B210C000369EBD /* Supporting Files */,
 				167B308F22FAA671007D67F3 /* Assets.xcassets */,
+				167B309122FAA671007D67F3 /* LaunchScreen.storyboard */,
 				167B309422FAA671007D67F3 /* Info.plist */,
 			);
 			path = "To-Do-List";
@@ -98,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				167B308C22FAA671007D67F3 /* Main.storyboard */,
-				167B309122FAA671007D67F3 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,8 +104,7 @@
 		16843F7523B210DB00369EBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				167B308A22FAA671007D67F3 /* TodoListTableViewController.swift */,
-				16E17DA023B3455B001CFD26 /* VC+SearchBarDelegate.swift */,
+				1638B79323BD994200D0C11A /* TodoListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,10 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16E17DA123B3455B001CFD26 /* VC+SearchBarDelegate.swift in Sources */,
+				1638B79423BD994200D0C11A /* TodoListViewController.swift in Sources */,
 				16108E04236DCD5A00481778 /* Data.swift in Sources */,
 				16843F7223B1C32700369EBD /* RealmManager.swift in Sources */,
-				167B308B22FAA671007D67F3 /* TodoListTableViewController.swift in Sources */,
 				167B308922FAA671007D67F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lacie.Easy-To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -427,7 +423,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lacie.Easy-To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

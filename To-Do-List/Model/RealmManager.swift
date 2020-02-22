@@ -6,7 +6,6 @@
 //  Copyright © 2019 黃士軒. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
 
 class RealmManager {
@@ -56,5 +55,17 @@ class RealmManager {
               print("Error changing data \(error)")
           }
         tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+    
+    func reviseData(_ data: Data, task: String, reload tableView: UITableView) {
+        
+        do {
+              try realm.write {
+                data.task = task
+              }
+          } catch {
+              print("Error changing data \(error)")
+          }
+        tableView.reloadData()
     }
 }
